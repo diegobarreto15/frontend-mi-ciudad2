@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import Report from '../src/components/Report'
+import SideBar from '../src/components/SideBar'
+import UploadReport from '../src/components/UploadReport'
+import BtnBuscar from '../src/components/BtnBuscar'
+import PublicReport from '../src/components/PublicReport'
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <BtnBuscar></BtnBuscar>
+    <Report></Report>
+    <SideBar></SideBar>
+    <UploadReport></UploadReport>
+    <PublicReport></PublicReport>
+    
     </div>
   );
 }
