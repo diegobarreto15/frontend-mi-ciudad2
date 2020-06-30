@@ -98,6 +98,11 @@ body::selection {
   height: 100vh;
 }
 
+.content-my-city{
+  display: flex;
+  flex-direction: row;
+}
+
 .content-my-city .sidebar-content .login .card-login{ 
   width: 530px; 
   height: 560px; 
@@ -321,7 +326,8 @@ body::selection {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
+  padding-top: 50px;
 } 
 
 /* search */

@@ -21,44 +21,44 @@ class SideBar extends React.Component {
                         <li>
                             <a href="index.html">
                                 <i class="fas fa-home"></i> Menu
-          </a>
+                            </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="far fa-user-circle"></i> Perfil
-          </a>
+                            </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-list-ul"></i> Reportes
-          </a>
+                            </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-history"></i> Historial
-          </a>
+                            </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="far fa-building"></i> Seguimiento de casos
-          </a>
+                            </a>
                         </li>
 
                         <li>
                             <a href="#">
                                 <i class="far fa-address-card"></i>Sobre nosotros
-          </a>
+                            </a>
                         </li>
                         <li>
                             <a href="./pages/help.html">
                                 <i class="far fa-question-circle"></i> Ayuda
-          </a>
+                            </a>
                         </li>
 
                         <li class="cerrar-sesion">
                             <a href="#">
                                 <i class="fas fa-sign-out-alt"></i> Cerrar sesión
-          </a>
+                            </a>
                         </li>
                     </ul>
                 </div>

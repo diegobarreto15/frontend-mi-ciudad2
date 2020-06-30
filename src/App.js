@@ -9,12 +9,15 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-    <BtnBuscar></BtnBuscar>
+    <div className="content-my-city">
+    {/* <BtnBuscar></BtnBuscar> */}
     <Report></Report>
     <SideBar></SideBar>
+    <div className="report-section">
     <UploadReport></UploadReport>
     <PublicReport></PublicReport>
+    </div>
+    
     
     </div>
   );

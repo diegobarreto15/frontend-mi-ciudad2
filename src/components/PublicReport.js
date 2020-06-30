@@ -26,7 +26,7 @@ class PublicReport extends React.Component {
                     <p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                     been the industry's standard dummy text ries, but also the leap into electronic ty
                     pesetting, raining essentially unchanged. It was popularised in the 1960s with the
-    release of.</p>
+                    release of.</p>
                 </div>
 
                 <div class="post-photo">

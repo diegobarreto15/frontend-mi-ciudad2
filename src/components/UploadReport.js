@@ -4,7 +4,7 @@ class UploadReport extends React.Component {
 
     render() {
         return (
-            <section class="content">
+            <section class="content report-section">
 
 
                 <div class="public-report">
