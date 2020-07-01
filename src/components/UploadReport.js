@@ -1,11 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Component } from 'react'
+import PublicReport from './PublicReport';
 
-class UploadReport extends React.Component {
 
+class UploadReport extends Component {
+    
+    state = {
+        arrayReport : [{
+            descripcion:'Hola',
+            ubicacion:'Mundo'
+        }
+    ]
+    };
+
+    mapearArray = () =>{
+        this.state.arrayReport.map( )
+    }
+
+    asignarValorVariable = () =>{
+        
+        this.state.arrayReport.push(this.state.descripcion,this.state.ubicacion)
+        console.log(this.state.arrayReport)
+     };
+
+    //funcion que setea el state del componente con lo 
+    valueToState = (target) => {
+        this.setState(this.state = () => ({
+            [target.name] : target.value
+        }))
+    };
+   
     render() {
         return (
             <section class="content report-section">
-
 
                 <div class="public-report">
 
@@ -18,8 +45,9 @@ class UploadReport extends React.Component {
                         </div>
                     </div>
 
-                    <div class="description">
-                        <textarea placeholder="Escribe la descripcion aca"></textarea>
+                    <div class="description">  
+                        <textarea name="descripcion" type="text" placeholder="Escribe la descripcion aqui" onChange={event => this.valueToState(event.target)}></textarea>
+                        <textarea name="ubicacion" type="text" placeholder="Escribe la url de la foto aqui" onChange={event => this.valueToState(event.target)}></textarea>
                     </div>
 
                     <div class="items-lower">
@@ -43,15 +71,13 @@ class UploadReport extends React.Component {
                             </li>
 
                             <li>
-                                <a href="#"
-                                    class="btn-public">
-                                    Publicar
-              </a>
+                                <a href="#" class="btn-public" onClick={this.asignarValorVariable}> Publicar </a>
                             </li>
 
                         </ul>
                     </div>
                 </div>
+
             </section>
         )
     }

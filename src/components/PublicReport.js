@@ -1,9 +1,7 @@
 import React from 'react';
 
 class PublicReport extends React.Component {
-
-
-
+    
     render() {
         return (
             <div class="public-report">
@@ -23,10 +21,7 @@ class PublicReport extends React.Component {
                 </div>
 
                 <div class="description desciption-post">
-                    <p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                    been the industry's standard dummy text ries, but also the leap into electronic ty
-                    pesetting, raining essentially unchanged. It was popularised in the 1960s with the
-                    release of.</p>
+                    <p>Lorem ipsum</p>
                 </div>
 
                 <div class="post-photo">
