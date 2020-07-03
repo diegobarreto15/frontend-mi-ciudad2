@@ -1,41 +1,38 @@
-import React, { useState } from 'react'
-import { Component } from 'react'
-import PublicReport from './PublicReport';
-
+import React, { useState } from "react";
+import { Component } from "react";
+import PublicReport from "./PublicReport";
+import { render } from "@testing-library/react";
+import Main from '../pages/Main'
 
 class UploadReport extends Component {
-    
-    state = {
-        arrayReport : [{
-            descripcion:'Hola',
-            ubicacion:'Mundo'
-        }
-    ]
-    };
 
-    mapearArray = () =>{
-        this.state.arrayReport.map( )
+    state = {
+        descripcion:"",
+        ubicacion:""
+    }
+    
+    componentDidMount() {
+        console.log(this.props)
     }
 
-    asignarValorVariable = () =>{
-        
-        this.state.arrayReport.push(this.state.descripcion,this.state.ubicacion)
-        console.log(this.state.arrayReport)
-     };
+    
+    
 
-    //funcion que setea el state del componente con lo 
+    //funcion que setea el state del componente con lo
     valueToState = (target) => {
-        this.setState(this.state = () => ({
-            [target.name] : target.value
-        }))
+        this.setState(
+            (this.state = () => ({
+                [target.name]: target.value,
+            }))
+        );
+      
+        console.log(target.name + " = " + target.value)
     };
-   
+           
     render() {
         return (
             <section class="content report-section">
-
                 <div class="public-report">
-
                     <div class="content-user">
                         <div class="profile-img">
                             <figure>
@@ -45,9 +42,19 @@ class UploadReport extends Component {
                         </div>
                     </div>
 
-                    <div class="description">  
-                        <textarea name="descripcion" type="text" placeholder="Escribe la descripcion aqui" onChange={event => this.valueToState(event.target)}></textarea>
-                        <textarea name="ubicacion" type="text" placeholder="Escribe la url de la foto aqui" onChange={event => this.valueToState(event.target)}></textarea>
+                    <div class="description">
+                        <textarea
+                            name="descripcion"
+                            type="text"
+                            placeholder="Escribe la descripcion aqui"
+                            onChange={(event) => this.valueToState(event.target)}
+                        ></textarea>
+                        <textarea
+                            name="ubicacion"
+                            type="text"
+                            placeholder="Escribe la ubicacion aqui"
+                            onChange={(event) => this.valueToState(event.target)}
+                        ></textarea>
                     </div>
 
                     <div class="items-lower">
@@ -71,16 +78,20 @@ class UploadReport extends Component {
                             </li>
 
                             <li>
-                                <a href="#" class="btn-public" onClick={this.asignarValorVariable}> Publicar </a>
+                                <a
+                                    href="#"
+                                    class="btn-public"
+                                        onClick={() => { this.props.newReport (this.state.descripcion,this.state.ubicacion) }}
+                                > 
+                                    {" "}
+                  Publicar{" "}
+                                </a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
-
             </section>
-        )
+        );
     }
-
 }
 export default UploadReport;
